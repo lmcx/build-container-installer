@@ -7,6 +7,9 @@ input.txt: gen_input.sh
 
 install-deps:
 
+install-deps-arm64:
+	$(MAKE) install-deps
+
 FILES=$(wildcard input.txt)
 clean:
 ifneq ($(FILES),)

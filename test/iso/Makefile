@@ -22,4 +22,7 @@ clean:
 install-deps:
 	$(install_pkg) isomd5sum coreutils squashfs-tools curl
 
+install-deps-arm64:
+	$(MAKE) install-deps
+
 .PHONY: all $(ISO_TESTS) clean

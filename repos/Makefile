@@ -8,6 +8,10 @@ repos: $(_REPO_FILES)
 
 install-deps:
 
+
+install-deps-arm64:
+	$(MAKE) install-deps
+
 FILES=$(wildcard *.repo)
 clean:
 ifneq ($(FILES),)

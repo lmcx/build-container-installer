@@ -4,6 +4,9 @@ $(IMAGE_NAME)-$(IMAGE_TAG):
 install-deps:
 	$(install_pkg) skopeo
 
+install-deps-arm64:
+	$(MAKE) install-deps
+
 FILES=$(filter-out Makefile,$(wildcard *))
 clean:
 ifneq ($(FILES),)

@@ -26,6 +26,9 @@ ansible_inventory:
 install-deps:
 	$(install_pkg) qemu-system qemu-utils xorriso qemu-system-x86 ncat socat jq ansible curl
 
+install-deps-arm64:
+	$(MAKE) install-deps
+
 files/mnt/iso:
 	$(if $(wildcard files/mnt),,mkdir files/mnt)
 	$(if $(wildcard files/mnt/iso),,mkdir files/mnt/iso)

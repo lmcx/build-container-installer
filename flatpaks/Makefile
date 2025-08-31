@@ -35,6 +35,9 @@ script.sh:
 
 install-deps:
 
+install-deps-arm64:
+	$(MAKE) install-deps
+
 clean:
 	$(if $(wildcard script.sh),rm script.sh)
 	$(if $(wildcard repo),rm -Rf repo)

@@ -45,6 +45,9 @@ install_include_post.tmpl:
 
 install-deps:
 
+install-deps-arm64:
+	$(MAKE) install-deps
+
 FILES=$(wildcard post_*) install_include_post.tmpl
 clean:
 ifneq ($(FILES),)

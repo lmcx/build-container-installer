@@ -9,4 +9,7 @@ install-deps:
 # Used to clone proper lorax branch
 	$(install_pkg) git
 
+install-deps-arm64:
+	$(MAKE) install-deps
+
 clean:

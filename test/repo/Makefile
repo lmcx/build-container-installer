@@ -8,4 +8,7 @@ $(REPO_TESTS):
 
 install-deps:
 
+install-deps-arm64:
+	$(MAKE) install-deps
+
 .PHONY: $(REPO_TESTS)

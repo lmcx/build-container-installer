@@ -17,6 +17,9 @@ $(filter-out README.md Makefile,$(wildcard */*)):
 install-deps:
 	$(foreach DIR,$(filter-out README.md Makefile,$(wildcard *)),$(MAKE) -w -C $(DIR) install-deps;)
 
+install-deps-arm64:
+	$(MAKE) install-deps
+
 clean:
 	$(foreach DIR,$(filter-out README.md Makefile,$(wildcard *)),$(MAKE) -w -C $(DIR) clean;)
 
