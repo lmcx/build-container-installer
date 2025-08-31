@@ -135,6 +135,11 @@ install-deps:
 	$(install_pkg) lorax xorriso coreutils gettext syslinux-nonlinux
 	$(foreach DIR,$(filter-out test,$(_SUBDIRS)),$(MAKE) -w -C $(DIR) install-deps;)
 
+.PHONY: install-deps-arm64
+install-deps-arm64:
+	$(install_pkg) lorax xorriso coreutils gettext
+	$(foreach DIR,$(filter-out test,$(_SUBDIRS)),$(MAKE) -w -C $(DIR) install-deps-arm64;)
+
 
 .PHONY: $(_SUBDIRS) $(wildcard test/*) $(wildcard test/*/*)
 test $(addsuffix /*,$(_SUBDIRS)):

@@ -224,7 +224,7 @@ jobs:
         id: build-image
         uses: redhat-actions/buildah-build@v2
         with:
-          containerfiles: Containerfile
+          containerfiles: Containerfile_arm64
           tags: ${{ steps.meta.outputs.tags || steps.meta_pr.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels || steps.meta_pr.outputs.labels }}
 
