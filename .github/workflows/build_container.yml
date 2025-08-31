@@ -143,7 +143,7 @@ jobs:
           done
           cosign sign --key env://COSIGN_PRIVATE_KEY --yes ${images}
 
-build-container-arm64:
+  build-container-arm64:
     if: >
       github.event_name == 'push' ||
       github.event_name == 'issue_comment'  ||
